@@ -1,0 +1,26 @@
+package lab7;
+
+public class Account {
+	int money;
+	public Account(){
+		this.money = 0;
+	}
+	public Account(int m){
+		this.money = m;
+	}
+	public void deposit(int m){
+		this.money+=m;
+	}
+	public int withdraw(int m) throws NotEnoughMoneyException{
+		if (this.money-m < 0 ){
+			throw new NotEnoughMoneyException(money-m);
+		}
+		else{
+			return m;
+		}
+	}
+	public int getBalance(){
+		return money;
+	}
+
+}

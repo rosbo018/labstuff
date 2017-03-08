@@ -1,0 +1,15 @@
+
+public class Testing2 extends Testing{
+	int x;
+	
+	//@Override
+	
+	public Testing2(int i) {
+		x = i;
+	}
+
+	public static void main(String[] args){
+		Testing t = new Testing2(1);
+	}
+
+}

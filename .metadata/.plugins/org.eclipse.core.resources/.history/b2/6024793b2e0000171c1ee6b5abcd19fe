@@ -1,0 +1,43 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+class Gui extends JFrame{
+	DisplayArea newD;
+	public Gui(){
+		setLayout( new GridBagLayout());
+		super.setTitle("Lab04: move it");
+		newD = new DisplayArea();
+		GridBagConstraints c = new GridBagConstraints();
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.ipady = 500;
+		c.ipadx = 500;  
+		c.gridx = 0;
+		c.gridy = 0;
+		JPanel buContainer = new JPanel();//button panel
+		buContainer.setBackground(Color.WHITE);
+
+		GridBagConstraints buCon = new GridBagConstraints();//button panel constraints
+		buCon.gridx = 0;
+		buCon.gridy = 1;
+		DocumentListener listener = new DocumentListener();
+		
+		JTextField txt = new JTextField();
+		txt.addDocumentListener(listener)
+
+
+		add(newD, c);//add display area to frame
+		
+		setResizable(false); 
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(700, 700);
+		pack();
+		setVisible(true);
+	}
+	public static void main(String[] args){
+		Gui g =  new Gui();
+
+		
+	}
+}

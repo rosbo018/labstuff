@@ -1,0 +1,10 @@
+
+public class Testing2 extends Testing{
+	int x;
+
+	public Testing2(int i){
+		x=i;
+	}
+	
+
+}

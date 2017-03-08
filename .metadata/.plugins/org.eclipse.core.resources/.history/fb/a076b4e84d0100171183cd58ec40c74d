@@ -1,0 +1,17 @@
+
+public class Testing {
+	int x;
+	public Testing(int i){
+		x=i;
+	}
+	public int test(Testing t){
+		return t.x;
+	}
+	public static void main (String[] args){
+		Testing a = new Testing(2);
+		Object b = new Testing(1);
+		System.out.println(a.x);
+		System.out.println(b.test(a));
+	}
+
+}

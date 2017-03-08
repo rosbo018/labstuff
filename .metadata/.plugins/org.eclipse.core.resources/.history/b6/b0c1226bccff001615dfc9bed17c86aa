@@ -1,0 +1,29 @@
+
+
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class SocClient {
+	int port;
+	String ip;
+	public static void startServer(){
+		ip	= "localhost";
+		
+	}
+	public static void main (String [] args) throws Exception
+	{
+
+		int port = 17499;
+		Socket s = new Socket(ip, port);
+
+		System.out.println("listening on port: " + s.getLocalPort());
+		
+		String str = "test";
+		OutputStreamWriter osw = new OutputStreamWriter(s.getOutputStream());
+		PrintWriter output = new PrintWriter(osw);
+		output.write(str);
+		osw.flush();
+		s.close();
+	}
+}

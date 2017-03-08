@@ -1,0 +1,9 @@
+package lab7;
+
+public class NotEnoughMoneyException extends IllegalStateException{
+	public NotEnoughMoneyException() {}
+	public NotEnoughMoneyException(String message)
+    {
+       super(message);
+    }
+}

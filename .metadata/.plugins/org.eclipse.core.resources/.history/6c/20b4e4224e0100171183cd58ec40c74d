@@ -1,0 +1,17 @@
+
+public class Testing2 extends Testing{
+	int x;
+	
+	//@Override
+	
+	public Testing2(int i) {
+		this.x = i;
+	}
+
+	public static void main(String[] args){
+		Testing2 t = new Testing2(1);
+		Testing x = new Testing2(2);
+		System.out.println(t.test(x));
+	}
+
+}
